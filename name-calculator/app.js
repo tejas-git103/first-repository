@@ -1,7 +1,7 @@
 
 
 var app=angular.module('MyApp', [] );
-app.controller("myCtrl",function ($scope) {
+app.controller("myCtrl",function ($scope, $filter) {
  $scope.name = "";
  $scope.len = $scope.name.length;
  $scope.total = 0;
@@ -18,5 +18,10 @@ app.controller("myCtrl",function ($scope) {
      total = total + string.charCodeAt(i);
    }
    return total;
+ }
+ $scope.fun = function () {
+   //var var1 = $filter('lowercase');
+   //$scope.name=var1($scope.name);
+   $scope.name=$scope.name.toUpperCase();
  }
 });
