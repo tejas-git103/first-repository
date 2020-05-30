@@ -1,5 +1,6 @@
 
-
+(function(){ //iife 
+'use strict';
 var app=angular.module('MyApp', [] );
 app.controller("myCtrl",function ($scope, $filter) {
  $scope.name = "";
@@ -25,3 +26,5 @@ app.controller("myCtrl",function ($scope, $filter) {
   // $scope.name=$scope.name.toUpperCase();
  }
 });
+
+})();
