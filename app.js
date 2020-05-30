@@ -20,8 +20,8 @@ app.controller("myCtrl",function ($scope, $filter) {
    return total;
  }
  $scope.fun = function () {
-   //var var1 = $filter('lowercase');
-   //$scope.name=var1($scope.name);
-   $scope.name=$scope.name.toUpperCase();
+   var var1 = $filter('uppercase');
+   $scope.name=var1($scope.name);
+  // $scope.name=$scope.name.toUpperCase();
  }
 });
