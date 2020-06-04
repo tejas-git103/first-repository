@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="Shopping-app">
+  <head>
+    <script src ="angular.min.js"></script>
+    <script src="app.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller="Shopping-list">
+    <div >
+      <div >
+        <h2>Shopping list</h2>
+      </div>
+      <div >
+        <ul>
+          <div >
+            <li ng-repeat="item in list">{{item.Name }}   {{item.Quantity}}
+              <button ng-click="remove($index)">X</button>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div >
+      <div class="">
+      <h2>Add element</h2>
+      </div>
+      <div class="">
+      Element :- <input ng-model="Name">
+      </div>
+      <div class="">
+      Quantity :- <input ng-model="Quantity">
+      </div>
+      <div class="">
+       <button  ng-click="add()">Add</button>
+      </div>
+    </div>
+    <div ng-if="flag1">
+      removed
+    </div>
+  </body>
+</html>

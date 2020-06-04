@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="digestApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Digest testing</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="controller">
+    <button ng-click="pluscount();pluscount2();">COUNTER ++ </button>
+    <br>normal count :- {{count}}
+    <br>setTimeout count :-{{count2}}
+  </body>
+</html>
